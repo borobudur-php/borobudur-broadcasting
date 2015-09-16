@@ -12,6 +12,7 @@ namespace Borobudur\Broadcasting;
 
 use Borobudur\Broadcasting\Broadcaster\BroadcasterInterface;
 use Borobudur\Broadcasting\Exception\InvalidArgumentException;
+use Borobudur\Broadcasting\Exception\RuntimeException;
 
 /**
  * @author      Iqbal Maulana <iq.bluejack@gmail.com>
@@ -50,6 +51,10 @@ class Broadcaster
      */
     public static function getInstance()
     {
+        if (null === self::$instance) {
+            throw new RuntimeException('Broadcaster is not instantiated yet.');
+        }
+
         return self::$instance;
     }
 
