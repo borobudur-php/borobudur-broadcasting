@@ -20,6 +20,11 @@ use Borobudur\Broadcasting\Exception\InvalidArgumentException;
 class Broadcaster
 {
     /**
+     * @var Broadcaster
+     */
+    private static $instance;
+
+    /**
      * @var BroadcasterInterface[]
      */
     private $broadcasters = array();
@@ -34,6 +39,18 @@ class Broadcaster
         foreach ($broadcasters as $broadcaster) {
             $this->add($broadcaster);
         }
+
+        self::$instance = $this;
+    }
+
+    /**
+     * Get last built instance.
+     *
+     * @return Broadcaster
+     */
+    public static function getInstance()
+    {
+        return self::$instance;
     }
 
     /**
