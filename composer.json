@@ -1,0 +1,27 @@
+{
+    "name": "borobudur/broadcasting",
+    "description": "Borobudur Broadcasting Component",
+    "keywords": ["borobudur", "broadcast"],
+    "type": "borobudur-component",
+    "license": "MIT",
+    "homepage": "https://github.com/borobudur-php/borobudur-broadcasting",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Iqbal Maulana",
+            "email": "iqbal.maulana@eduostia.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": { "Borobudur\\Broadcasting\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Borobudur\\Broadcasting\\Test\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": { "dev-master": "0.1.x-dev" }
+    }
+}
