@@ -21,11 +21,13 @@ trait BroadcastEventTrait
 {
     /**
      * @var string
+     * @internal
      */
     private $broadcastName;
 
     /**
      * @var array
+     * @internal
      */
     private $broadcastChannels;
 
